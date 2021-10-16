@@ -9,10 +9,7 @@ from api_pedidos.excecao import (
     FalhaDeComunicacaoError,
     PedidoNaoEncontradoError,
 )
-
-from api_pedidos.magalu_api import (
-    recuperar_itens_por_pedido
-)
+from api_pedidos.magalu_api import recuperar_itens_por_pedido
 
 app = FastAPI()
 
