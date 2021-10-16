@@ -1,6 +1,5 @@
 from http import HTTPStatus
 from typing import List
-from uuid import UUID
 
 from fastapi import Depends, FastAPI, Request
 from fastapi.responses import JSONResponse
@@ -11,11 +10,11 @@ from api_pedidos.excecao import (
     PedidoNaoEncontradoError,
 )
 
+from api_pedidos.magalu_api import (
+    recuperar_itens_por_pedido
+)
+
 app = FastAPI()
-
-
-def recuperar_itens_por_pedido(identificacao_do_pedido: UUID) -> List[Item]:
-    pass
 
 
 @app.exception_handler(PedidoNaoEncontradoError)
